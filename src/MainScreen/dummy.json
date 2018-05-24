@@ -1,0 +1,42 @@
+[
+    {
+        "coin_name" : "비트코인",
+        "now_price" : 8881000,
+        "closing_price" : 9163000,
+        "max_price" : 9222000,
+        "min_price" : 8822002, 
+        "volume" : 7490
+    },
+    {
+        "coin_name" : "이더리움",
+        "now_price" : 725500,
+        "closing_price" : 696500,
+        "max_price" : 770000,
+        "min_price" : 694500, 
+        "volume" : 73810
+    },
+    {
+        "coin_name" : "이더리움 클래식",
+        "now_price" : 17500,
+        "closing_price" : 19020,
+        "max_price" : 19250,
+        "min_price" : 17320, 
+        "volume" : 224278
+    },
+    {
+        "coin_name" : "리플",
+        "now_price" : 689,
+        "closing_price" : 743,
+        "max_price" : 747,
+        "min_price" : 681, 
+        "volume" : 59654126
+    },
+    {
+        "coin_name" : "라이트코인",
+        "now_price" : 141000,
+        "closing_price" : 147800,
+        "max_price" : 149500,
+        "min_price" : 140100, 
+        "volume" : 11483
+    }
+]

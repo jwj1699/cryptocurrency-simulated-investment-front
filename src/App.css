@@ -1,17 +1,6 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  height: 40px;
 }
 
 .App-title {
@@ -20,6 +9,50 @@
 
 .App-intro {
   font-size: large;
+}
+
+/******************************************/
+
+.MainScreen {
+  text-align: center;
+}
+
+.MainScreen-header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
+
+.MainScreen-Top {
+  background-color: rgb(133, 128, 128);
+  padding: 20px;
+  height: 350px;
+  color: white;
+  position:relative;
+}
+
+.MainScreen-Table {
+  padding-top:30px;
+  padding-left:10%;
+}
+
+
+.Header{
+  height: 100%;
+  width: 100%;
+}
+
+
+.Login-Container{
+  border: 1px solid #48BAE4;
+  position:absolute;
+  top: 90px;
+  right : 50px;
+  background-color:rgb(133, 128, 128);
+}
+
+.Login{
+  padding: 20px;
 }
 
 @keyframes App-logo-spin {
