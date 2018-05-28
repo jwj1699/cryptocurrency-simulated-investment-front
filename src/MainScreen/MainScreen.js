@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../Header';
 import Login from '../Login';
 import CompositeTable from './CompositeTable';
 
@@ -10,9 +9,6 @@ class MainScreen extends Component {
     render() {
         return (
             <div className="MainScreen">
-                <header className="MainScreen-header">
-                    <Header/>
-                </header>
                 <div className="MainScreen-Top" style={{ backgroundImage: "url(" +  MainImage  + ")" }}>
                     <Login/>
                 </div>
