@@ -11,6 +11,7 @@ import '../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min
 
 import MainScreen from './MainScreen/MainScreen';
 import Header from './Header'
+import SignUp from './signup/index'
 
 class App extends Component {
     render() {
@@ -23,6 +24,7 @@ class App extends Component {
                     <div className="layout ">
                         <Switch>
                             <Route exact path="/" component={MainScreen} />
+                            <Route path="/signup" component={SignUp}/>
                             {/* <Route path="/dashboard/:job?/:view?/:id?" component={Dashboard} />*/}
                         </Switch>
                     </div>
