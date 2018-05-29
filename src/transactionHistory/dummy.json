@@ -1,0 +1,169 @@
+[
+    {
+        "trade_date" : "2018-05-16 18:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-05-17 18:24:28",
+        "currency" : "비트코인",
+        "type" : "매도",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-05-18 18:34:21",
+        "currency" : "리플",
+        "type" : "매수",
+        "trade_amount" : 122.0281,
+        "trade_price" : 24839
+    },
+    {
+        "trade_date" : "2018-05-19 10:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-05-19 18:35:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-05-20 18:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },{
+        "trade_date" : "2018-06-16 18:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-06-17 18:24:28",
+        "currency" : "비트코인",
+        "type" : "매도",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-06-18 18:34:21",
+        "currency" : "리플",
+        "type" : "매수",
+        "trade_amount" : 122.0281,
+        "trade_price" : 24839
+    },
+    {
+        "trade_date" : "2018-06-19 10:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-06-19 18:35:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-06-20 18:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-07-16 18:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-07-17 18:24:28",
+        "currency" : "비트코인",
+        "type" : "매도",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-07-18 18:34:21",
+        "currency" : "리플",
+        "type" : "매수",
+        "trade_amount" : 122.0281,
+        "trade_price" : 24839
+    },
+    {
+        "trade_date" : "2018-07-19 10:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-07-19 18:35:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-07-20 18:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-08-16 18:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-08-17 18:24:28",
+        "currency" : "비트코인",
+        "type" : "매도",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-08-18 18:34:21",
+        "currency" : "리플",
+        "type" : "매수",
+        "trade_amount" : 122.0281,
+        "trade_price" : 24839
+    },
+    {
+        "trade_date" : "2018-08-19 10:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-08-19 18:35:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    },
+    {
+        "trade_date" : "2018-08-20 18:34:28",
+        "currency" : "비트코인",
+        "type" : "매수",
+        "trade_amount" : 12.0281,
+        "trade_price" : 7394839
+    }
+]

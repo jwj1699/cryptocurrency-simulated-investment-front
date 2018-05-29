@@ -11,19 +11,22 @@ import '../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min
 
 import MainScreen from './MainScreen/MainScreen';
 import Header from './Header'
+import TransactionhistoryContainer from './transactionHistory/TransactionhistoryContainer'
+import Template from './template';
 
 class App extends Component {
     render() {
         return (
             <div>
-                <header className="MainScreen-header">
-                    <Header/>
-                </header>
+                
                 <Router >
                     <div className="layout ">
+                        <header className="MainScreen-header">
+                            <Header/>
+                        </header>
                         <Switch>
                             <Route exact path="/" component={MainScreen} />
-                            {/* <Route path="/dashboard/:job?/:view?/:id?" component={Dashboard} />*/}
+                            <Route path="/myPage/:to?" component={Template}/>
                         </Switch>
                     </div>
                 </Router>
