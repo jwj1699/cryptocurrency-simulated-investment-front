@@ -41,7 +41,7 @@
   height: 100%;
   width: 100%;
 }
-
+/**배경 #303030*/
 
 .Login-Container{
   border: 1px solid #48BAE4;
@@ -61,6 +61,17 @@
   margin-top: 30px;
   padding: 10px;
   text-align: center;
+}
+
+.HistoryForm{
+  border: 3px solid #dee2e6;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 10px;
+}
+.form-label{
+  margin-right: 5%;
 }
 
 @keyframes App-logo-spin {

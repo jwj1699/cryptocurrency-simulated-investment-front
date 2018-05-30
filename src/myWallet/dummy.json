@@ -1,0 +1,95 @@
+{
+    "wallet":[
+        {
+            "currency" : "BTC",
+            "name" : "비트코인",
+            "amount" : 3.1639,
+            "buy_price" : 7254300,
+            "now_price" : 7927000
+        },
+        {
+            "currency" : "ETH",
+            "name" : "이더리움",
+            "amount" : 12.0172,
+            "buy_price" : 427500,
+            "now_price" : 390500
+        },
+        {
+            "currency" : "ETC",
+            "name" : "이더리움 클래식",
+            "amount" : 0
+        },
+        {
+            "currency" : "XRP",
+            "name" : "리플",
+            "amount" : 0
+        },
+        {
+            "currency" : "LTC",
+            "name" : "라이트코인",
+            "amount" : 0
+        }
+    ],
+    "profit":[
+        {
+            "mon" : "1월",
+            "profitAndLoss" : 424,
+            "cumulate" : 424
+        },
+        {
+            "mon" : "2월",
+            "profitAndLoss" : 345,
+            "cumulate" : 769
+        },
+        {
+            "mon" : "3월",
+            "profitAndLoss" : -393,
+            "cumulate" : 376
+        },
+        {
+            "mon" : "4월",
+            "profitAndLoss" : -108,
+            "cumulate" : 268
+        },
+        {
+            "mon" : "5월",
+            "profitAndLoss" : -194,
+            "cumulate" : 74
+        },
+        {
+            "mon" : "6월",
+            "profitAndLoss" : 135,
+            "cumulate" : 209
+        },
+        {
+            "mon" : "7월",
+            "profitAndLoss" : 178,
+            "cumulate" : 387
+        },
+        {
+            "mon" : "8월",
+            "profitAndLoss" : 86,
+            "cumulate" : 473
+        },
+        {
+            "mon" : "9월",
+            "profitAndLoss" : -119,
+            "cumulate" : 354
+        },
+        {
+            "mon" : "10월",
+            "profitAndLoss" : -361,
+            "cumulate" : -7
+        },
+        {
+            "mon" : "11월",
+            "profitAndLoss" : -203,
+            "cumulate" : -210
+        },
+        {
+            "mon" : "12월",
+            "profitAndLoss" : 124,
+            "cumulate" : -86
+        }
+    ]
+}
