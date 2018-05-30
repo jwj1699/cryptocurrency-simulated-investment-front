@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TemplateSidebar from './TemplateSidebar';
 
 import Transactionhistory from '../transactionHistory';
+import MyWallet from '../myWallet'
 
 class TemplateContainer extends Component {
     render() {
@@ -9,9 +10,10 @@ class TemplateContainer extends Component {
 
         let screen = null;
         if(to === 'history') screen = <Transactionhistory/>
+        if(to === 'wallet') screen = <MyWallet/>
 
         return (
-            <div className="row">
+            <div className="row" >
                 <TemplateSidebar to={to}/>
                 <div className="col-md-10">                
                     {screen}
