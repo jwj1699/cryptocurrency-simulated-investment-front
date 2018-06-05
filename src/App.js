@@ -15,12 +15,12 @@ import MainScreen from './mainScreen/MainScreen';
 import Header from './Header'
 import SignUp from './signup'
 import Template from './template';
+import BoardListContainer from './board/BoardTemplateContainer'
 
 class App extends Component {
     render() {
         return (
             <div>
-                
                 <Router >
                     <div className="layout ">
                         <header className="MainScreen-header">
@@ -29,6 +29,7 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/" component={MainScreen} />
                             <Route path="/signup" component={SignUp}/>
+                            <Route path="/board/:to?" component={BoardListContainer}/>
                             <Route path="/myPage/:to?" component={Template}/>
                             <Route path="/trade/:to?" component={Template}/>
                         </Switch>

@@ -1,0 +1,21 @@
+{
+    "data":[
+        { "no": 30, "category": "정보", "title" : "안녕하세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 29, "category": "정보", "title": "안녕하세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 28, "category": "정보", "title": "안녕하세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 27, "category": "정보", "title": "안녕하2gewgwegwegbdb세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 26, "category": "정보", "title": "안녕하세weg요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 25, "category": "정보", "title": "안녕하세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 24, "category": "정보", "title": "안녕하세wegwe요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 23, "category": "정보", "title": "안녕하세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 22, "category": "정보", "title": "안녕하124124세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 21, "category": "정보", "title": "안녕하세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 20, "category": "정보", "title": "안녕하12521g세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 19, "category": "정보", "title": "안녕하세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 18, "category": "정보", "title": "안녕하세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 17, "category": "정보", "title": "안녕하세요", "writer": "홍길동", "date": "2018-05-29", "hit": 7 },
+        { "no": 16, "category": "정보", "title": "dddddddddddddddddddddddddd", "writer": "홍길동", "date": "2018-05-29", "hit": 7 }
+    ],
+    "currentPage" : 2 ,
+    "totalCount" : 456
+}
