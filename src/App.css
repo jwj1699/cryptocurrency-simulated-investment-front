@@ -74,6 +74,17 @@
   margin-right: 5%;
 }
 
+.TradePriceInfo-Table-sell{
+  background-color: #e6eef7
+}
+.TradePriceInfo-Table-buy{
+  background-color: #f3dbdb
+}
+.TradePriceInfo-Table-Info{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

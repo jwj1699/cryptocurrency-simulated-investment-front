@@ -3,6 +3,7 @@ import TemplateSidebar from './TemplateSidebar';
 
 import Transactionhistory from '../transactionHistory';
 import MyWallet from '../myWallet'
+import Trade from '../trade'
 
 class TemplateContainer extends Component {
     render() {
@@ -11,6 +12,7 @@ class TemplateContainer extends Component {
         let screen = null;
         if(to === 'history') screen = <Transactionhistory/>
         if(to === 'wallet') screen = <MyWallet/>
+        if(to === 'BTC'|| to === 'ETH'|| to === 'ETC'|| to === 'XRP'|| to === 'LTC') screen = <Trade/>
 
         return (
             <div className="row" >

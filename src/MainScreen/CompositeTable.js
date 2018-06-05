@@ -14,7 +14,7 @@ class CompositeTable extends Component {
         let fluctuation = row.now_price - row.closing_price;
         let rate = fluctuation / row.closing_price * 100;
 
-        return fluctuation < 0 
+        return fluctuation > 0 
                     ? <div style={{color:"red"}}>{( this.unitFormat(fluctuation) + " (" + rate.toFixed(2) + "%)")}</div>
                     : <div style={{color:"blue"}}>{( this.unitFormat(fluctuation) + " (" + rate.toFixed(2) + "%)")}</div>
         

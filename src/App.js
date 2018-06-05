@@ -7,11 +7,13 @@ import {
 } from 'react-router-dom';
 
 import './App.css'
+import '../node_modules/uxcore/assets/iconfont.css';
+import '../node_modules/uxcore/assets/orange.css';
 import '../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css'
 
-import MainScreen from './MainScreen/MainScreen';
+import MainScreen from './mainScreen/MainScreen';
 import Header from './Header'
-import SignUp from './signup/index'
+import SignUp from './signup'
 import Template from './template';
 
 class App extends Component {
@@ -28,6 +30,7 @@ class App extends Component {
                             <Route exact path="/" component={MainScreen} />
                             <Route path="/signup" component={SignUp}/>
                             <Route path="/myPage/:to?" component={Template}/>
+                            <Route path="/trade/:to?" component={Template}/>
                         </Switch>
                     </div>
                 </Router>
