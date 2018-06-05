@@ -9,7 +9,7 @@ import {
 import './App.css'
 import '../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css'
 
-import MainScreen from './MainScreen/MainScreen';
+import MainScreen from './mainScreen/MainScreen';
 import Header from './Header'
 import SignUp from './signup/index'
 
