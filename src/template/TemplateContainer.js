@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import TemplateSidebar from './TemplateSidebar';
 
-import Transactionhistory from '../transactionHistory';
-import MyWallet from '../myWallet'
-import Trade from '../trade'
+import Transactionhistory from '../components/transactionHistory';
+import MyWallet from '../components/myWallet'
+import Trade from '../components/trade'
 
 class TemplateContainer extends Component {
     render() {

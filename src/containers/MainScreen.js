@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Login from '../Login';
-import CompositeTable from './CompositeTable';
+import CompositeTable from '../components/mainScreen/CompositeTable';
 
 import MainImage from '../img/main_Image.jpg'
-import data from './dummy.json';
+import data from '../components/mainScreen/dummy.json';
 
 class MainScreen extends Component {
     render() {

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import TradeChart from './TradeChart'
-import TradeOrder from './tradeOrder'
-import TradePriceInfo from './TradePriceInfo'
-import TradeStandbyOrder from './TradeStandbyOrder'
+import TradeChart from '../components/trade/TradeChart'
+import TradeOrder from '../components/trade/tradeOrder'
+import TradePriceInfo from '../components/trade/TradePriceInfo'
+import TradeStandbyOrder from '../components/trade/TradeStandbyOrder'
 
 class TradeContainer extends Component {
 

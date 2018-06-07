@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import BoardListContainer from './boardList/';
-import BoardWrite from './boardWrite'
+import BoardListContainer from '../components/board/boardList/';
+import BoardWrite from '../components/board/boardWrite'
 
 class BoardTemplateContainer extends Component {
     render() {

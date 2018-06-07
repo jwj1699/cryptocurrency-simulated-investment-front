@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import TransactionhistoryForm from './TransactionhistoryForm';
-import TransactionhistoryTable from './TransactionhistoryTable';
+import TransactionhistoryForm from '../components/transactionHistory/TransactionhistoryForm';
+import TransactionhistoryTable from '../components/transactionHistory/TransactionhistoryTable';
 
-import data from './dummy.json';
+import data from '../components/transactionHistory/dummy.json';
 
 class TransactionhistoryContainer extends Component {
     render() {

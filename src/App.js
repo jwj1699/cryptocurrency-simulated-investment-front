@@ -11,11 +11,11 @@ import '../node_modules/uxcore/assets/iconfont.css';
 import '../node_modules/uxcore/assets/orange.css';
 import '../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css'
 
-import MainScreen from './mainScreen/MainScreen';
+import MainScreen from './components/mainScreen';
 import Header from './Header'
-import SignUp from './signup'
+import SignUp from './components/signup'
 import Template from './template';
-import BoardListContainer from './board/BoardTemplateContainer'
+import Board from './components/board'
 
 class App extends Component {
     render() {
@@ -29,7 +29,7 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/" component={MainScreen} />
                             <Route path="/signup" component={SignUp}/>
-                            <Route path="/board/:to?" component={BoardListContainer}/>
+                            <Route path="/board/:to?" component={Board}/>
                             <Route path="/myPage/:to?" component={Template}/>
                             <Route path="/trade/:to?" component={Template}/>
                         </Switch>

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import WalletChart from './WalletChart';
-import WalletCard from './WalletCard';
-import WalletTable from './WalletTable';
+import WalletChart from '../components/myWallet/WalletChart';
+import WalletCard from '../components/myWallet/WalletCard';
+import WalletTable from '../components/myWallet/WalletTable';
 
-import data from './dummy.json';
+import data from '../components/myWallet/dummy.json';
 
 class WalletContainer extends Component {
 

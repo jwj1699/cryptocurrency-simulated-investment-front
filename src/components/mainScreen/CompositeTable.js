@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
-import btcIcon from '../img/btc_32.png'
-import etcIcon from '../img/etc_32.png'
-import ethIcon from '../img/eth_32.png'
-import xrpIcon from '../img/xrp_32.png'
-import ltcIcon from '../img/ltc_32.png'
+import btcIcon from '../../img/btc_32.png'
+import etcIcon from '../../img/etc_32.png'
+import ethIcon from '../../img/eth_32.png'
+import xrpIcon from '../../img/xrp_32.png'
+import ltcIcon from '../../img/ltc_32.png'
 import data from './dummy.json';
 
 class CompositeTable extends Component {
