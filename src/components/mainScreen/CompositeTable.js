@@ -11,8 +11,8 @@ import data from './dummy.json';
 class CompositeTable extends Component {
 
     rateOfPrice = (cell, row) => {
-        let fluctuation = row.now_price - row.closing_price;
-        let rate = fluctuation / row.closing_price * 100;
+        let fluctuation = row.nowPrice - row.closingPrice;
+        let rate = fluctuation / row.closingPrice * 100;
 
         return fluctuation > 0 
                     ? <div style={{color:"red"}}>{( this.unitFormat(fluctuation) + " (" + rate.toFixed(2) + "%)")}</div>
@@ -27,25 +27,27 @@ class CompositeTable extends Component {
 
     iconFormat = (cell) => {
         let coinIcon;
-        if(cell === '비트코인') coinIcon = btcIcon;
-        else if(cell === '이더리움') coinIcon = etcIcon;
-        else if(cell === '이더리움 클래식') coinIcon = ethIcon;
-        else if(cell === '리플') coinIcon = xrpIcon;
-        else if(cell === '라이트코인') coinIcon = ltcIcon;
+        let coinName;
+        if(cell === 'BTC') {coinIcon = btcIcon, coinName = '비트코인'}
+        else if(cell === 'ETH') {coinIcon = etcIcon, coinName = '이더리움'}
+        else if(cell === 'ETC') {coinIcon = ethIcon, coinName = '이더리움 클래식'}
+        else if(cell === 'XRP') {coinIcon = xrpIcon, coinName = '리플'}
+        else if(cell === 'LTC') {coinIcon = ltcIcon, coinName = '라이트코인'}
 
-        return `<img src=${coinIcon} alt="BTC"/> ${cell}`;
+        return `<img src=${coinIcon} alt="BTC"/> ${coinName}`;
     }
 
     render() {
         return (
             <div>
-                <BootstrapTable data={ data }>
-                    <TableHeaderColumn dataAlign='left'  dataFormat={ this.iconFormat } dataField='coin_name' isKey> </TableHeaderColumn>
-                    <TableHeaderColumn dataAlign='right' dataFormat={ this.unitFormat } dataField='now_price' >현재가</TableHeaderColumn>
-                    <TableHeaderColumn dataAlign='right' dataFormat={ this.unitFormat } dataField='closing_price'>전일가</TableHeaderColumn>
+                {console.log(this.props.data)}
+                <BootstrapTable data={ this.props.data }>
+                    <TableHeaderColumn dataAlign='left'  dataFormat={ this.iconFormat } dataField='currency' isKey> </TableHeaderColumn>
+                    <TableHeaderColumn dataAlign='right' dataFormat={ this.unitFormat } dataField='nowPrice' >현재가</TableHeaderColumn>
+                    <TableHeaderColumn dataAlign='right' dataFormat={ this.unitFormat } dataField='closingPrice'>전일가</TableHeaderColumn>
                     <TableHeaderColumn dataAlign='right' dataFormat={ this.rateOfPrice } >변동율</TableHeaderColumn>
-                    <TableHeaderColumn dataAlign='right' dataFormat={ this.unitFormat } dataField='max_price'>고가</TableHeaderColumn>
-                    <TableHeaderColumn dataAlign='right' dataFormat={ this.unitFormat } dataField='min_price'>저가</TableHeaderColumn>
+                    <TableHeaderColumn dataAlign='right' dataFormat={ this.unitFormat } dataField='maxPrice'>고가</TableHeaderColumn>
+                    <TableHeaderColumn dataAlign='right' dataFormat={ this.unitFormat } dataField='minPrice'>저가</TableHeaderColumn>
                     <TableHeaderColumn dataAlign='right' dataFormat={ this.unitFormat } dataField='volume'>거래량</TableHeaderColumn>
                 </BootstrapTable>
             </div>
