@@ -22,6 +22,11 @@ class MainScreen extends Component {
         });
     }
 
+    loginView = () => {
+        if(this.props.userId) return
+        return <Login onLogin = {this.props.onLogin}/>
+    }
+
     componentWillMount(){
         this.getData()
     }
@@ -30,7 +35,7 @@ class MainScreen extends Component {
         return (
             <div className="MainScreen">
                 <div className="MainScreen-Top" style={{ backgroundImage: "url(" +  MainImage  + ")" }}>
-                    <Login/>
+                    {this.loginView()}
                 </div>
                 <div className="MainScreen-Table col-md-11">
                     <CompositeTable data={this.state.tableData}/>

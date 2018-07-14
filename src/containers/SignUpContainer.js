@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom'
 import axios from 'axios';
 
 class SignUpContainer extends Component {
@@ -10,6 +11,8 @@ class SignUpContainer extends Component {
             userPw: '',
             userName: '',
             userEmail: '',
+
+            redirectForMain: false
         };
     }
 
@@ -32,27 +35,25 @@ class SignUpContainer extends Component {
 
         console.log("signupPost")
         axios.post('http://localhost:8181/signupPost', params)
-        .then( response => { alert(response) } )
-        .catch( error => { alert(error) } );
+        .then( response => { 
+            alert("가입을 환영합니다.")
+            this.setState({
+                redirectForMain: true
+            })
+        })
+        .catch( error => { alert("회원가입 실패"+error) } );
     }
 
-    signupGet = () =>{
-        console.log("GET")
-        axios.get('http://localhost:8181/signupGet', {
-            params: {
-                userId: this.state.userId,
-                userPw: this.state.userPw,
-                userName: this.state.userName,
-                userEmail: this.state.userEmail
-            }
-        })
-        .then( response => { alert(response) } )
-        .catch( error => { alert(error) } );
+    renderRedirect = () => {
+        if (this.state.redirectForMain) {
+          return <Redirect to='/'/>
+        }
     }
 
     render() {
         return (
             <div className='SignUp-Container'>
+                {this.renderRedirect()}
                 <label style={{fontSize:25,marginBottom:40}}>회원가입</label>
                 <div className='col-md-3' style={{margin:'auto', textAlign:'left'}}>
                     <div className='form-group'>
@@ -76,9 +77,7 @@ class SignUpContainer extends Component {
                         <input className="form-control" type="text" name="userEmail" onChange={this.handleChange} placeholder="이메일을 입력하세요"/>
                     </div>
                     <div style={{textAlign:'center',marginTop:"10%"}}>
-                        <input type="submit" className="col-md-8 btn btn-default" value="가입하기"/>
                         <button className="col-md-8 btn btn-default" onClick={this.signupPost}>POST</button>
-                        <button className="col-md-8 btn btn-default" onClick={this.signupGet}>GET</button>
                     </div>
                 </div>
             </div>

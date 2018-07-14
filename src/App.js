@@ -18,16 +18,46 @@ import Template from './template';
 import Board from './components/board'
 
 class App extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            userId: '',
+            userCashAmonut: ''
+        };
+    }
+
+    onLogin = (LoginId,LoginCash) => {
+		this.setState({
+            userId: LoginId,
+            userCashAmonut: LoginCash
+        });
+    }
+
+    onLogout = () => {
+		this.setState({
+			userId:''
+        });
+    }
+
+    testtt = (param) =>{
+        console.log(param)
+    }
+
     render() {
         return (
             <div>
                 <Router >
                     <div className="layout ">
                         <header className="MainScreen-header">
-                            <Header/>
+                            <Header 
+                                userId = {this.state.userId}
+                                userCashAmonut = {this.state.userCashAmonut}
+                                onLogout = {this.onLogout}
+                            />
                         </header>
                         <Switch>
-                            <Route exact path="/" component={MainScreen} />
+                            <Route exact path="/" render={props => <MainScreen onLogin = {this.onLogin} userId = {this.state.userId}/>}/>
                             <Route path="/signup" component={SignUp}/>
                             <Route path="/board/:to?" component={Board}/>
                             <Route path="/myPage/:to?" component={Template}/>

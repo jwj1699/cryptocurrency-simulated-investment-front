@@ -27,27 +27,10 @@ class Login extends Component {
             params.append('userId', this.state.userId);
             params.append('userPw', this.state.userPw);
 
-        console.log("loginPost")
-
         axios.post('http://localhost:8181/loginPost', params)
-        .then( response => { console.log(response.data.userId+" 로그인성공") } )
-        .catch( error => { alert(error) } );
+        .then( response => { console.log(response.data.userCashAmonut), this.props.onLogin(response.data.userId, response.data.userCashAmonut) } )
+        .catch( error => { alert("로그인 실패"+error) } );
     }
-
-    loginGet = () =>{
-        console.log("GET")
-        axios.get('http://localhost:8181/loginGet', {
-            params: {
-                userId: this.state.userId,
-                userPw: this.state.userPw,
-                userName: this.state.userName,
-                userEmail: this.state.userEmail
-            }
-        })
-        .then( response => { alert(response.userId) } )
-        .catch( error => { alert(error) } );
-    }
-
 
     render() {
         return (
