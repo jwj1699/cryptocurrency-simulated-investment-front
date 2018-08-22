@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
 import WalletChart from '../components/myWallet/WalletChart';
 import WalletCard from '../components/myWallet/WalletCard';
 import WalletTable from '../components/myWallet/WalletTable';
@@ -14,8 +16,19 @@ class WalletContainer extends Component {
             xAxis: '',
             seriesProfit: '',
             seriesLoss: '',
-            cumulate: ''
+            cumulate: '',
+
+            wallet: '',
         })
+    }
+
+    getWallet = (userId) => {
+        let params = new URLSearchParams();
+            params.append('userId', userId);
+        
+        axios.post('http://localhost:8181/wallet', params)
+        .then( response => { console.log(response.data)} )
+        .catch( error => { alert("실패"+error) } );
     }
 
     setxAxis = () => {
@@ -54,7 +67,8 @@ class WalletContainer extends Component {
         this.setxAxis(),
         this.setSeriesProfit(),
         this.setSeriesLoss(),
-        this.setCumulate()
+        this.setCumulate(),
+        this.getWallet('test')
     }
 
 

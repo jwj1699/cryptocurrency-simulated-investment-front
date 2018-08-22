@@ -5,6 +5,7 @@ import {
     Route,
     Switch
 } from 'react-router-dom';
+import { sessionService } from 'redux-react-session';
 
 import './App.css'
 import '../node_modules/uxcore/assets/iconfont.css';
@@ -18,46 +19,16 @@ import Template from './template';
 import Board from './components/board'
 
 class App extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            userId: '',
-            userCashAmonut: ''
-        };
-    }
-
-    onLogin = (LoginId,LoginCash) => {
-		this.setState({
-            userId: LoginId,
-            userCashAmonut: LoginCash
-        });
-    }
-
-    onLogout = () => {
-		this.setState({
-			userId:''
-        });
-    }
-
-    testtt = (param) =>{
-        console.log(param)
-    }
-
     render() {
         return (
             <div>
-                <Router >
+                <Router onEnter={sessionService.checkAuth}>
                     <div className="layout ">
                         <header className="MainScreen-header">
-                            <Header 
-                                userId = {this.state.userId}
-                                userCashAmonut = {this.state.userCashAmonut}
-                                onLogout = {this.onLogout}
-                            />
+                            <Header/>
                         </header>
                         <Switch>
-                            <Route exact path="/" render={props => <MainScreen onLogin = {this.onLogin} userId = {this.state.userId}/>}/>
+                            <Route exact path="/" component={MainScreen}/>
                             <Route path="/signup" component={SignUp}/>
                             <Route path="/board/:to?" component={Board}/>
                             <Route path="/myPage/:to?" component={Template}/>

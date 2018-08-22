@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import Login from '../Login';
 import axios from 'axios';
 import CompositeTable from '../components/mainScreen/CompositeTable';
@@ -23,8 +24,8 @@ class MainScreen extends Component {
     }
 
     loginView = () => {
-        if(this.props.userId) return
-        return <Login onLogin = {this.props.onLogin}/>
+        if(!this.props.authenticated)
+            return <Login onLogin = {this.props.onLogin}/>
     }
 
     componentWillMount(){
@@ -45,4 +46,9 @@ class MainScreen extends Component {
     }
 }
 
-export default MainScreen;
+const mapState = (state) => ({
+    user: state.session.user,
+    authenticated: state.session.authenticated
+  });
+
+export default connect(mapState)(MainScreen);

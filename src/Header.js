@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
+import * as sessionActions from './actions/sessionAction';
 import logo from './logo.svg';
 
 class Header extends Component {
 
+
+    Logout = () =>{
+        const { logout } = this.props.actions;
+        logout()
+    }
+
     userInfo = () =>{
-        if(!this.props.userId) return
-        return <div>
-                    <div>{this.props.userId}님</div>
-                    <div>{this.props.userCashAmonut}원</div>
-                </div>
+        if(this.props.authenticated)
+            return <div>
+                        <div>{this.props.user.userId}님</div>
+                        <div>{this.props.user.userCashAmonut}원</div>
+                        <button onClick={this.Logout}>로그아웃</button>
+                    </div>
     }
 
     render() {
@@ -26,4 +36,15 @@ class Header extends Component {
     }
 }
 
-export default Header;
+const mapDispatch = (dispatch) => {
+    return {
+      actions: bindActionCreators(sessionActions, dispatch)
+    };
+};
+
+const mapState = (state) => ({
+    user: state.session.user,
+    authenticated: state.session.authenticated
+  });
+
+export default connect(mapState, mapDispatch)(Header);

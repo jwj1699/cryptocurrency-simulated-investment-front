@@ -12,8 +12,12 @@
     "react-bootstrap-table": "^4.3.1",
     "react-bootstrap-tabs": "^1.0.2",
     "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-react-session": "^2.5.0",
+    "redux-thunk": "^2.3.0",
     "uxcore": "^0.20.5-beta.0",
     "uxcore-table": "^9.1.0"
   },
