@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class TradePriceInfo extends Component {
 
-    rateOfPrice = (now_price, closing_price) => {
-        let fluctuation = now_price - closing_price;
-        let rate = fluctuation / closing_price * 100;
+    rateOfPrice = (nowPrice, closingPrice) => {
+        let fluctuation = nowPrice - closingPrice;
+        let rate = fluctuation / closingPrice * 100;
 
         return fluctuation > 0 
                     ? <div style={{color:"red"}}>{( this.unitFormat(fluctuation) + " (" + rate.toFixed(2) + "%)")}</div>
@@ -19,22 +19,23 @@ class TradePriceInfo extends Component {
 
 
     render() {
+        console.log(this.props.orderbook.asks)
         let info =
             <div>
                 <div className='form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>전일가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.closing_price)}</div>
+                    <div className='col' style={{textAlign:'left'}}>전일가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.currencyInfo.closingPrice)}</div>
                 </div>
                 <div className='TradePriceInfo-Table-Info form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>전일대비</div><div className='col' style={{textAlign:'right'}}>{this.rateOfPrice(this.props.now_price,this.props.closing_price)}</div>
+                    <div className='col' style={{textAlign:'left'}}>전일대비</div><div className='col' style={{textAlign:'right'}}>{this.rateOfPrice(this.props.currencyInfo.nowPrice,this.props.currencyInfo.closingPrice)}</div>
                 </div>
                 <div className='form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>고가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.max_price)}</div>
+                    <div className='col' style={{textAlign:'left'}}>고가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.currencyInfo.maxPrice)}</div>
                 </div>
                 <div className='TradePriceInfo-Table-Info form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>저가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.min_price)}</div>
+                    <div className='col' style={{textAlign:'left'}}>저가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.currencyInfo.minPrice)}</div>
                 </div>
                 <div className='form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>거래량</div><div className='col' style={{textAlign:'right'}}>{this.props.volume}</div>
+                    <div className='col' style={{textAlign:'left'}}>거래량</div><div className='col' style={{textAlign:'right'}}>{this.props.currencyInfo.volume}</div>
                 </div>
             </div>
         let test =
@@ -84,7 +85,8 @@ class TradePriceInfo extends Component {
                             <td>92.7229</td><td className='TradePriceInfo-Table-sell'>759,000</td>
                         </tr>
                         <tr>
-                            <td rowspan='5'>{test}</td><td className='TradePriceInfo-Table-buy'>758,500</td><td>31.6196</td>
+                            <td rowspan='5'>{test}</td>
+                            <td className='TradePriceInfo-Table-buy'>758,500</td><td>31.6196</td>
                         </tr>
                         <tr>
                             <td className='TradePriceInfo-Table-buy'>758,000</td><td>8.3272</td>
