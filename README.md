@@ -1,16 +1,18 @@
-## 가상화폐거래소(front)
+# 가상화폐거래소(front)
 
 react + boot 환경으로 거래소 API를 사용하여 가상거래를 할수 있는 웹사이트
 
-> 기획서
-
+#### 기획서 ####
 https://drive.google.com/open?id=180e9bMkzgP2mICnVTShQaczh3ISUnZRj
 
->개발환경
-##### client:  react
-##### server:  springBoot + 오라클
+#### 개발환경 ####
+**client:**  react
 
->가안
+**server:**  springBoot + 오라클
+
+
+
+#### 가안 ####
 
 + 메인페이지 (로그인, 코인현황표)
 + 로그인 ( 메인페이지에서 )
@@ -24,7 +26,7 @@ https://drive.google.com/open?id=180e9bMkzgP2mICnVTShQaczh3ISUnZRj
 - 자유게시판( [글번호, 카테고리(각코인,정보,잡담) 제목, 작성자, 날짜, 조회수] ,
 페이징처리, 글쓰기버튼)
 
->라이브러리
+#### 라이브러리  ####
 + axios
 + react-router-dom
 + redux-react-session
