@@ -19,9 +19,11 @@ class TradePriceInfo extends Component {
 
 
     render() {
+        console.log(this.props.orderbook.asks)
         let info =
             <div>
                 <div className='form-inline'>
+<<<<<<< HEAD
                     <div className='col' style={{textAlign:'left'}}>전일가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.CurrencyInfo.closingPrice)}</div>
                 </div>
                 <div className='TradePriceInfo-Table-Info form-inline'>
@@ -35,6 +37,21 @@ class TradePriceInfo extends Component {
                 </div>
                 <div className='form-inline'>
                     <div className='col' style={{textAlign:'left'}}>거래량</div><div className='col' style={{textAlign:'right'}}>{this.props.CurrencyInfo.volume}</div>
+=======
+                    <div className='col' style={{textAlign:'left'}}>전일가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.currencyInfo.closingPrice)}</div>
+                </div>
+                <div className='TradePriceInfo-Table-Info form-inline'>
+                    <div className='col' style={{textAlign:'left'}}>전일대비</div><div className='col' style={{textAlign:'right'}}>{this.rateOfPrice(this.props.currencyInfo.nowPrice,this.props.currencyInfo.closingPrice)}</div>
+                </div>
+                <div className='form-inline'>
+                    <div className='col' style={{textAlign:'left'}}>고가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.currencyInfo.maxPrice)}</div>
+                </div>
+                <div className='TradePriceInfo-Table-Info form-inline'>
+                    <div className='col' style={{textAlign:'left'}}>저가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.currencyInfo.minPrice)}</div>
+                </div>
+                <div className='form-inline'>
+                    <div className='col' style={{textAlign:'left'}}>거래량</div><div className='col' style={{textAlign:'right'}}>{this.props.currencyInfo.volume}</div>
+>>>>>>> 40e4cec7e72545f77a94a7effdd753cc6d380cf0
                 </div>
             </div>
         let test =
@@ -84,7 +101,8 @@ class TradePriceInfo extends Component {
                             <td>92.7229</td><td className='TradePriceInfo-Table-sell'>759,000</td>
                         </tr>
                         <tr>
-                            <td rowspan='5'>{test}</td><td className='TradePriceInfo-Table-buy'>758,500</td><td>31.6196</td>
+                            <td rowspan='5'>{test}</td>
+                            <td className='TradePriceInfo-Table-buy'>758,500</td><td>31.6196</td>
                         </tr>
                         <tr>
                             <td className='TradePriceInfo-Table-buy'>758,000</td><td>8.3272</td>

@@ -25,7 +25,7 @@ class TradeStandbyOrder extends Component {
           
         return (
             <div>
-                <UxcoreTable jsxcolumns={columns} />
+                <UxcoreTable jsxcolumns={columns}/>
             </div>
         );
     }
