@@ -17,7 +17,7 @@ class MainScreen extends Component {
     }
 
     getData = () =>{
-        axios.get("http://localhost:8181/tableData")
+        axios.get("http://localhost:8181/CurrencyInfo/")
         .then(res => {this.setState({ tableData:res.data })
             },err => {alert("Server rejected response with: " + err);
         });

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import TradeChart from '../components/trade/TradeChart'
 import TradeOrder from '../components/trade/tradeOrder'
@@ -10,16 +11,28 @@ class TradeContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currency:'BTC',
             step:'500',
-            closing_price: 786000,
-            now_price: 797500,
-            max_price : 770000,
-            min_price : 694500,
-            volume : 73810
-        };
+            CurrencyInfo: {}
+            
+        } 
     }
 
+    getCurrencyInfo = (currency) =>{
+        axios.get("http://localhost:8181/CurrencyInfo/"+currency)
+        .then(res => {this.setState({ CurrencyInfo:res.data })
+            },err => {alert("Server rejected response with: " + err);
+        });
+    }
+
+    componentWillMount(){
+        //this.getCurrencyInfo(this.props.to)
+    }
+
+    componentWillReceiveProps(nextProps){
+        this.getCurrencyInfo(nextProps.to)
+    }
+
+    
     render() {
         return (
             <div>
@@ -40,11 +53,7 @@ class TradeContainer extends Component {
                     </div>
                     <div className='col-md-6'>
                         <TradePriceInfo
-                            closing_price={this.state.closing_price}
-                            now_price={this.state.now_price}
-                            max_price={this.state.max_price}
-                            min_price={this.state.min_price}
-                            volume={this.state.volume}
+                            CurrencyInfo = {this.state.CurrencyInfo}
                         />
                     </div>
                 </div>

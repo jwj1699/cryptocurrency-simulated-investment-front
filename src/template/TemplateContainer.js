@@ -12,7 +12,7 @@ class TemplateContainer extends Component {
         let screen = null;
         if(to === 'history') screen = <Transactionhistory/>
         if(to === 'wallet') screen = <MyWallet/>
-        if(to === 'BTC'|| to === 'ETH'|| to === 'ETC'|| to === 'XRP'|| to === 'LTC') screen = <Trade/>
+        if(to === 'BTC'|| to === 'ETH'|| to === 'ETC'|| to === 'XRP'|| to === 'LTC') screen = <Trade to={to}/>
 
         return (
             <div className="row" >

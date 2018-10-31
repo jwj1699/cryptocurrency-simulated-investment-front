@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class TradePriceInfo extends Component {
 
-    rateOfPrice = (now_price, closing_price) => {
-        let fluctuation = now_price - closing_price;
-        let rate = fluctuation / closing_price * 100;
+    rateOfPrice = (nowPrice, closingPrice) => {
+        let fluctuation = nowPrice - closingPrice;
+        let rate = fluctuation / closingPrice * 100;
 
         return fluctuation > 0 
                     ? <div style={{color:"red"}}>{( this.unitFormat(fluctuation) + " (" + rate.toFixed(2) + "%)")}</div>
@@ -22,19 +22,19 @@ class TradePriceInfo extends Component {
         let info =
             <div>
                 <div className='form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>전일가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.closing_price)}</div>
+                    <div className='col' style={{textAlign:'left'}}>전일가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.CurrencyInfo.closingPrice)}</div>
                 </div>
                 <div className='TradePriceInfo-Table-Info form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>전일대비</div><div className='col' style={{textAlign:'right'}}>{this.rateOfPrice(this.props.now_price,this.props.closing_price)}</div>
+                    <div className='col' style={{textAlign:'left'}}>전일대비</div><div className='col' style={{textAlign:'right'}}>{this.rateOfPrice(this.props.CurrencyInfo.nowPrice,this.props.CurrencyInfo.closingPrice)}</div>
                 </div>
                 <div className='form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>고가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.max_price)}</div>
+                    <div className='col' style={{textAlign:'left'}}>고가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.CurrencyInfo.maxPrice)}</div>
                 </div>
                 <div className='TradePriceInfo-Table-Info form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>저가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.min_price)}</div>
+                    <div className='col' style={{textAlign:'left'}}>저가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.CurrencyInfo.minPrice)}</div>
                 </div>
                 <div className='form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>거래량</div><div className='col' style={{textAlign:'right'}}>{this.props.volume}</div>
+                    <div className='col' style={{textAlign:'left'}}>거래량</div><div className='col' style={{textAlign:'right'}}>{this.props.CurrencyInfo.volume}</div>
                 </div>
             </div>
         let test =
