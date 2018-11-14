@@ -12,14 +12,14 @@ class MainScreen extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tableData:''
+            tableData:data
         };
     }
 
     getData = () =>{
         axios.get("http://localhost:8181/CurrencyInfo/")
         .then(res => {this.setState({ tableData:res.data })
-            },err => {alert("Server rejected response with: " + err);
+            },err => {
         });
     }
 
