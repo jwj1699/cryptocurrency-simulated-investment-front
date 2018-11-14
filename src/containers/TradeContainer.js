@@ -12,21 +12,11 @@ class TradeContainer extends Component {
         super(props);
         this.state = {
             step:'500',
-<<<<<<< HEAD
-            CurrencyInfo: {}
-=======
             currencyInfo: {},
             orderbook:{}
->>>>>>> 40e4cec7e72545f77a94a7effdd753cc6d380cf0
-            
         } 
     }
 
-<<<<<<< HEAD
-    getCurrencyInfo = (currency) =>{
-        axios.get("http://localhost:8181/CurrencyInfo/"+currency)
-        .then(res => {this.setState({ CurrencyInfo:res.data })
-=======
     getApi = (currency) =>{
         let data1;
         let data2;
@@ -56,19 +46,12 @@ class TradeContainer extends Component {
     getOrderbook = (currency) =>{
         axios.get("https://api.bithumb.com/public/orderbook/"+currency)
         .then(res => {this.setState({ orderbook:res.data.data })
->>>>>>> 40e4cec7e72545f77a94a7effdd753cc6d380cf0
             },err => {alert("Server rejected response with: " + err);
         });
     }
 
     componentWillMount(){
-<<<<<<< HEAD
-        //this.getCurrencyInfo(this.props.to)
-    }
 
-    componentWillReceiveProps(nextProps){
-        this.getCurrencyInfo(nextProps.to)
-=======
         this.getCurrencyInfo(this.props.to);
         this.getOrderbook(this.props.to);
     }
@@ -76,7 +59,6 @@ class TradeContainer extends Component {
     componentWillReceiveProps(nextProps){
         this.getCurrencyInfo(nextProps.to);
         this.getOrderbook(this.props.to);
->>>>>>> 40e4cec7e72545f77a94a7effdd753cc6d380cf0
     }
 
     
@@ -101,12 +83,9 @@ class TradeContainer extends Component {
                     </div>
                     <div className='col-md-6'>
                         <TradePriceInfo
-<<<<<<< HEAD
-                            CurrencyInfo = {this.state.CurrencyInfo}
-=======
+
                             currencyInfo = {this.state.currencyInfo}
                             orderbook = {this.state.orderbook}
->>>>>>> 40e4cec7e72545f77a94a7effdd753cc6d380cf0
                         />
                     </div>
                 </div>

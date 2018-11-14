@@ -23,21 +23,6 @@ class TradePriceInfo extends Component {
         let info =
             <div>
                 <div className='form-inline'>
-<<<<<<< HEAD
-                    <div className='col' style={{textAlign:'left'}}>전일가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.CurrencyInfo.closingPrice)}</div>
-                </div>
-                <div className='TradePriceInfo-Table-Info form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>전일대비</div><div className='col' style={{textAlign:'right'}}>{this.rateOfPrice(this.props.CurrencyInfo.nowPrice,this.props.CurrencyInfo.closingPrice)}</div>
-                </div>
-                <div className='form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>고가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.CurrencyInfo.maxPrice)}</div>
-                </div>
-                <div className='TradePriceInfo-Table-Info form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>저가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.CurrencyInfo.minPrice)}</div>
-                </div>
-                <div className='form-inline'>
-                    <div className='col' style={{textAlign:'left'}}>거래량</div><div className='col' style={{textAlign:'right'}}>{this.props.CurrencyInfo.volume}</div>
-=======
                     <div className='col' style={{textAlign:'left'}}>전일가</div><div className='col' style={{textAlign:'right'}}>{this.unitFormat(this.props.currencyInfo.closingPrice)}</div>
                 </div>
                 <div className='TradePriceInfo-Table-Info form-inline'>
@@ -51,7 +36,6 @@ class TradePriceInfo extends Component {
                 </div>
                 <div className='form-inline'>
                     <div className='col' style={{textAlign:'left'}}>거래량</div><div className='col' style={{textAlign:'right'}}>{this.props.currencyInfo.volume}</div>
->>>>>>> 40e4cec7e72545f77a94a7effdd753cc6d380cf0
                 </div>
             </div>
         let test =
