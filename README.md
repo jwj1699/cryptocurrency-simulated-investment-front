@@ -3,7 +3,7 @@
 react + boot 환경으로 거래소 API를 사용하여 가상거래를 할수 있는 웹사이트
 
 AWS S3를 사용하여 배포 
-[사이트이동.](http://simulated-investment.s3-website.ap-northeast-2.amazonaws.com/)
+> [사이트이동.](http://simulated-investment.s3-website.ap-northeast-2.amazonaws.com/)
 
 
 #### 기획서 ####
